@@ -2,36 +2,59 @@ body {
     margin:0;
     font-size: 100%;
     height: 100vh;
-    width: 100vw;
 }
 
 #container {
     display:grid;
+    height: 100vh;
+    width: 100vw;
     grid-template-areas: 
     'nv'
     'cn'
+    'sc'
     'ft';
-    grid-column: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 20% 70% 5%;
 }
 
 nav {
-    display: block; 
     grid-area: nv;
+    background-color: black;
+    display: flex;
 }
 
 nav a {
-    display: block;
+    grid-area: nv;
     position: sticky;
     text-decoration: none;
-    padding: 2%;
+    padding: 1%;
     background-color: red;
-    float: left;
+    
 }
 
-#head{
-    text-align: center;
+nav a+a{
+    left: 47%;
 }
 
-#search {
-    float:right;
+nav a+a+a {
+    left: 97%
+}
+
+nav a:hover {
+    background-color: turquoise;
+}
+
+#banner {
+    grid-area: cn;
+    height:100%;
+}
+
+section {
+    background-color: teal;
+    grid-area: sc;
+}
+
+footer {
+    background-color: blue;
+    grid-area: ft;
 }
